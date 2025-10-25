@@ -80,13 +80,13 @@
     <p>&copy; 2025 My Simple Website</p>
   </footer>
   <script type='text/javascript'>
-    window.addEventListener("onEmbeddedMessagingReady", () => {
+   window.addEventListener("onEmbeddedMessagingReady", () => {
   console.log("Received the onEmbeddedMessagingReady event.");
 
   // Send your identity token to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
     identityTokenType: "JWT",
-    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiMjM0NTY4IiwiZXhwIjoxNzU5NzcxMTQ4LCJpYXQiOjE3NTk3NzA4NDh9.P8gVtScYdFEV2yQb2Ak-qGOcuLDHBXxNmxc3FaXwoyKrd7h_Q_WJaO-oo6XFzC5jncnwBlynm282B_iiKkFlNfofkwpfqCPKfISGMUPGfznds4zivaJmQsvKFa2qlrVM8-B0j0qguVwndWqG4XOIYonhCCQaH84L0zzOWp6hYYnXcn_f7eAk12aIkwYpUIOZ0FXj81RzbDEoOLPP1IIzWtni3xbC3rhjjQ-L8kQ7gOh2HVH-VdYXwhx8VsWvj-WF0C8CKM1On92dXwH4jRUZhXrrzH67asvAjTwbwisU6LtWd0DoYY21dNW8pd8Il8"
+    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjE0MTE2MTksImlhdCI6MTc2MTM5NzIxOX0.DHxSJTx2aeFWNJQBXeontOupoUzO2mGmc78zCoJHQXQoLyrZkXxosI-22g2EoFHvFcb3rZFzYVzk9wRNetxnkI6_vO_JTJph6ZXh1qYCIbsvj7eSPzbUp3ilaeilrRImcLHDWp8hjQ8DrTQyq7CFtjNI0i-ZE-ttiDd6a3nQ3dLiJe4kZhXuKO0eLDp0MjwpQ60Nn0EqudQYPy0lpvgne3lM8C_hWqR-wukHWiuvZfIHpJutk1PHT6a1mWHQSaZxzqIr7X5EdJhQWPJDaEqckrIfmai8zKTCGcUDcf-aU-ThDi-qkeGWzc2CTU269ASLcMVx9Y0dxhaznxmXgZJFuw"
   });
   
    
@@ -149,6 +149,7 @@
 </body>
 
 </html>
+
 
 
 
