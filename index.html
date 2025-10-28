@@ -92,36 +92,7 @@
    
 });
     
-  window.dropdownOptions = [
-        { label: "Billing", value: "Billing" },
-        { label: "Technical Support", value: "Technical_Support" },
-        { label: "Sales", value: "Sales" }
-    ];
-    window.addEventListener("onEmbeddedMessagingReady", e => {
-    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Client_Id" : "11098324"});
-    });
-    
-    window.addEventListener("onEmbeddedMessagingReady", e => {
-  embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
-    // List the pre-chat field names with the value and whether
-    // it's editable in the pre-chat form.
-    "Policy_Number": {
-      "value": "Jane",
-      "isEditableByEndUser": false
-    }/**,
-    "dropdown_prechat": {
-      "value": "A2",
-      "isEditableByEndUser": false
-    },
-    "checkbox_prechat": {
-      "value": false,
-      "isEditableByEndUser": false
-    }*/
-  });
-    
-  
-
-});
+ 
 
     function initEmbeddedMessaging() {
         try {
@@ -149,6 +120,7 @@
 </body>
 
 </html>
+
 
 
 
