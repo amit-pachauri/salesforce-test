@@ -81,18 +81,47 @@
   </footer>
   <script type='text/javascript'>
    window.addEventListener("onEmbeddedMessagingReady", () => {
-  console.log("Received the onEmbeddedMessagingReady event. for verification");
+  console.log("Received the onEmbeddedMessagingReady event.");
 
   // Send your identity token to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
     identityTokenType: "JWT",
-    identityToken: "eyJraWQiOiJqd3RrZXkiLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTWElTSldUSXNzdWVyIiwiYXVkIjoiQ1NSIiwiZXhwIjoxNzYxNjkxNDcxLCJpYXQiOjE3NjE2NjMzMDEsIm5iZiI6MTc2MTY2MzMwMSwic3ViIjoiQ2xpZW50c0NoYXRUb2tlbiJ9.NWzH16QB6cQBZ1pu8i-SjFaC5KtznVTKrWbC56fcxVjB_l9naQ8iCgYFYz0NTlQmp53umUC0pCcF2tfrhUggtD29MfL2ZgdhFibSSBxc-5WIM1AF0F2V0GiDdbmnqiIh2hkTJttgNimN-vGqJc_hZ1wGp2iMhhTEnMLAfThMbz1dsstBhDqWGqlAejHSrCWjBPYiYSNMskMXq3mC7lBn7gbv_tXEG0fBu4ppymw_o2d7DWzRXD_BjyRJlR16OySAURhm9NsAaxEa2kBOIW1M4ANP70kLZEwTMOhy8siqX9f8e1Rpv4-MyodFQd1Hfow_Y3R7IA0aE2q5grfh3QhTRQ"
+    identityToken: "eyJraWQiOiJqd3RrZXkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJTWElTSldUSXNzdWVyIiwiYXVkIjoiQ1NSIiwiZXhwIjoxNzYxNzUwMjE4LCJpYXQiOjE3NjE2NjM4MTgsIm5iZiI6MTc2MTY2MzgxOCwic3ViIjoiQ2xpZW50c0NoYXRUb2tlbiJ9.d7CSjEGruO-yZLbtzl7ZXs6hDdtNz95TOvZyzaOINAcKCq1IxOeYkOBG5QM1FioS2BSyNykzi3TKUb4r0ioMLAHqva7UxVtucZenD2vZ8SFknNmO460szsxAlviXmK7z0Z0ruWxXsgWq7I-Fq_AAyfcp3BkWGyw9FKZYO2LURBPnzdS-ILTQ-gYGVgVxVF0mWFPRCtq9ipCa00m_0kh_8YgiZciSlvinMBVSWPf6srOHFz1fPLIty7TRvUjXXqYQuojTfO_lPpLH1d7gIBLhL3syMcKz3xTUQ6gBiCa4nVchoeDXqU1gh2WRimmiQWXJdndvem5QjpxNo3LXlMIM6w"
   });
   
    
 });
     
- 
+  window.dropdownOptions = [
+        { label: "Billing", value: "Billing" },
+        { label: "Technical Support", value: "Technical_Support" },
+        { label: "Sales", value: "Sales" }
+    ];
+    window.addEventListener("onEmbeddedMessagingReady", e => {
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Client_Id" : "11098324"});
+    });
+    
+    window.addEventListener("onEmbeddedMessagingReady", e => {
+  embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
+    // List the pre-chat field names with the value and whether
+    // it's editable in the pre-chat form.
+    "Policy_Number": {
+      "value": "Jane",
+      "isEditableByEndUser": false
+    }/**,
+    "dropdown_prechat": {
+      "value": "A2",
+      "isEditableByEndUser": false
+    },
+    "checkbox_prechat": {
+      "value": false,
+      "isEditableByEndUser": false
+    }*/
+  });
+    
+  
+
+});
 
     function initEmbeddedMessaging() {
         try {
@@ -120,16 +149,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
