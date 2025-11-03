@@ -79,50 +79,69 @@
   <footer>
     <p>&copy; 2025 My Simple Website</p>
   </footer>
-  <script type='text/javascript'>
-   window.addEventListener("onEmbeddedMessagingReady", () => {
+  <script type="text/javascript" async="true" src="https://play.vidyard.com/embed/v4.js"></script>
+    
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type='text/javascript'>
+    
+  window.addEventListener("onEmbeddedMessagingReady", () => {
   console.log("Received the onEmbeddedMessagingReady event.");
 
   // Send your identity token to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
     identityTokenType: "JWT",
-    identityToken: "eyJraWQiOiJqd3RrZXkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJTWElTSldUSXNzdWVyIiwiYXVkIjoiQ1NSIiwiZXhwIjoxNzYxODQ5OTUzLCJpYXQiOjE3NjE3NjM1NTMsIm5iZiI6MTc2MTc2MzU1Mywic3ViIjoiQ2xpZW50c0NoYXRUb2tlbiJ9.PMgQwB2OBce6sVNMaK_OlOJeG1Ko5RTVgPaUvncB3g6r2d7tDk_LZD7e3s7asW_-uDdxk5j_PiAkIgzjAbs0iqmlH5v2yEkTOiOslNCi27ujXe5SFtq4tRRxwfb9A4trb4Jzq_aWovkyc7kkXZLiGq8fJe0nmGquDeW80PEcZ8gzeXVwgaJEpEnFKA_jAi1h7mnll5lRgRdJqB1xqwfYxFIP89w-0wfNquyjX169YD5Mimb3JonQmfQ08R5DP3bpCNXYLdqAvY3HIUV4NGtz9FrTMU521mVxB48gczlz2WjrONhLiYpIdzvbJuNhXrOz__WIolmpE1zth7Dbjf5LQw"
-    //identityToken:"eyJraWQiOiJqd3RrZXkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJTWElTSldUSXNzdWVyIiwiYXVkIjoiQ1NSIiwiZXhwIjoxNzYxODQ5ODgxLCJpYXQiOjE3NjE3NjM0ODEsIm5iZiI6MTc2MTc2MzQ4MSwic3ViIjoiQ2xpZW50c0NoYXRUb2tlbiJ9.arg3zCYaoe4IwaO3jAQGNF_EBZ_78N8xUhny0UpKW1Ht9zLlFD_RheBqtu8FprPCeHky3-dih-YC-fW8kNYdjzlzGNHvM1z46EyIJkJrbZ1pn2ULCrLblu6-C3qVyF7Qw38g6rVzYojKEFx1X3h_Qj5pWQDL6FWTsX5beuBkhKpRYqMabrlXktPSD6wZypE9U-FrxoEQssnaih6WILMC2E7kh5n91K0ygaEri7VE-9L6sYn60o-WWAHdLU1hHyP3rZ3kYgB4AFg6_uISdjkkMCfyle7kqo100wpOY9cqE-1W99J-54DIoo9sq5rxrXH07cwWToY9sRyxXSzaJZ2Jlg"
+    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjIxNzcwOTMsImlhdCI6MTc2MjE2MjY5M30.VcD60A9qn9T6Uza0H-TfM9jPOD8OtiHmFvAt2U_fcsyPWc51vyc5QxyKZ7gEXcYMJtTPAOiRYbkDyzxkYWw_F3tgb0ZGv81IUcsDFmPbti2CLCHuALo7ywk1mHT4GFCOe6_EChKoRTtIr2ZEkqvk58qfkCAtWaf2B1chagTs_R3tfWoxcWV3cmRIA80n1nFWGSiZhgGV7J79NGcqCOmEFHyij4QO4k5RG2kruAoX96mLIeDCSyDI39fq3gzwOTI5-BE9u0ER0ffPUkD9yrZ4u1Mzg1YhkCzEl3QC40TOUNqcDrOO4gMP_2DjMENzL_zJDbizBkt1R6UZTVhkgarc-g"
   });
-  
    
 });
-    
-  window.dropdownOptions = [
-        { label: "Billing", value: "Billing" },
-        { label: "Technical Support", value: "Technical_Support" },
-        { label: "Sales", value: "Sales" }
-    ];
-    window.addEventListener("onEmbeddedMessagingReady", e => {
-    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Client_Id" : "11098324"});
-    });
-    
-    window.addEventListener("onEmbeddedMessagingReady", e => {
-  embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
-    // List the pre-chat field names with the value and whether
-    // it's editable in the pre-chat form.
-    "Policy_Number": {
-      "value": "Jane",
-      "isEditableByEndUser": false
-    }/**,
-    "dropdown_prechat": {
-      "value": "A2",
-      "isEditableByEndUser": false
-    },
-    "checkbox_prechat": {
-      "value": false,
-      "isEditableByEndUser": false
-    }*/
-  });
-    
-  
 
+window.addEventListener("onEmbeddedMessagingIdentityTokenExpired", () => {
+  console.log("Received the onEmbeddedMessagingIdentityTokenExpired event.");
+
+  // Refresh the identity token and send it to Salesforce.
+  embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
+    identityTokenType: "JWT",
+    identityToken: "eyJraWQiOiJqd3RrZXkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJTWElTSldUSXNzdWVyIiwiYXVkIjoiQ1NSIiwiZXhwIjoxNzYxODQ5OTUzLCJpYXQiOjE3NjE3NjM1NTMsIm5iZiI6MTc2MTc2MzU1Mywic3ViIjoiQ2xpZW50c0NoYXRUb2tlbiJ9.PMgQwB2OBce6sVNMaK_OlOJeG1Ko5RTVgPaUvncB3g6r2d7tDk_LZD7e3s7asW_-uDdxk5j_PiAkIgzjAbs0iqmlH5v2yEkTOiOslNCi27ujXe5SFtq4tRRxwfb9A4trb4Jzq_aWovkyc7kkXZLiGq8fJe0nmGquDeW80PEcZ8gzeXVwgaJEpEnFKA_jAi1h7mnll5lRgRdJqB1xqwfYxFIP89w-0wfNquyjX169YD5Mimb3JonQmfQ08R5DP3bpCNXYLdqAvY3HIUV4NGtz9FrTMU521mVxB48gczlz2WjrONhLiYpIdzvbJuNhXrOz__WIolmpE1zth7Dbjf5LQw"
+  });
+
+  // Or, instead of refreshing the identity token, clear all session data
+  // by calling clearSession.
+  // embeddedservice_bootstrap.userVerificationAPI.clearSession(true)
 });
+
+// When the user logs out, call clearSession.
+function onUserLogout() {
+  embeddedservice_bootstrap.userVerificationAPI
+    .clearSession(true)
+    .then(() => {
+      // Add actions to run after the session is cleared successfully.
+    })
+    .catch((error) => {
+      // Add actions to run after clearing the session fails.
+    })
+    .finally(() => {
+      // Add actions to run whether the chat client launches
+      // successfully or not.
+    });
+
+  // Add code to perform any other logout actions.
+}
+
+function decodeJwtSub(token) {
+if (!token) return null;
+const parts = token.split('.');
+if (parts.length !== 3) {
+console.error('Invalid JWT');
+return null;
+}
+const base64Url = parts[1];
+let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+const pad = base64.length % 4;
+if (pad) base64 += '='.repeat(4 - pad);
+const json = atob(base64);
+const payload = JSON.parse(json);
+return payload.sub || null;
+} 
 
     function initEmbeddedMessaging() {
         try {
@@ -137,6 +156,40 @@
                     scrt2URL: 'https://nylic--devrelease.sandbox.my.salesforce-scrt.com'
                 }
             );
+            //...............
+            var tokenkey = 'eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjE5MzUxMTcsImlhdCI6MTc2MTkyMDcxN30.KmO1LB9KaXx6_Jri6ofCPKlipIAQCVwl2QqOh_NGX-ZdHaWmt7Cu_FDernkW0bd632UawiqYTkUu1QD_FGqpHPVlAe27zA4eMI1GG3aHmMMYbtOgrRdsnOtSW-6-XC3XoGM9voCaaB2T6UfG4YI4W-ZZZ7nEouxy5UEGKFMrgxOlJVJNOSuPdecs-aTcKPjHnwrOoym1k8evwq0RXdyBZlXfi2box2c4BaeAHFJat_G8Znk5VjunhkVxXuoPbA0VmzGFyIYvNteh3-5K8BiPd_BsL2TvYM6hbty-gJYR-9TlG-mbTDO4Q8ZAkDB8yPFsF4kKrlmJ3o_ltjPP6lgRrw';
+             var sub = decodeJwtSub(tokenkey);
+           // console.log('tokenkey: ', sub);
+            var sClientId = '12345';
+             const key = CryptoJS.enc.Utf8.parse("1234567890123456");
+          const iv = CryptoJS.enc.Utf8.parse("abcdef9876543210");
+            
+            const encrypted = CryptoJS.AES.encrypt(sClientId, key, {
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7,
+                });
+
+                const cipherBase64 = encrypted.ciphertext.toString(CryptoJS.enc.Base64);
+                console.log("Encrypted (Base64):", cipherBase64);
+            let hiddenPrechatFields = {"Client_Id": cipherBase64};
+            
+            window.addEventListener("message", (event) => {
+                if (event.data && event.data.eventName === "request_hidden_prechat_fields") {
+                console.log("Received request_hidden_prechat_fields event");
+                // Get Messaging for Web Iframe element reference.
+                let miaw_chat_iframe = embeddedservice_bootstrap.utilAPI.getEmbeddedMessagingFrame();
+                // Send a postMessage event directly to the custom LWC with the data requested.
+                miaw_chat_iframe.contentWindow.postMessage(
+                {
+                "eventName": "receive_hidden_prechat_fields",
+                "data": hiddenPrechatFields
+            },
+            'https://nylic--devrelease.sandbox.my.site.com/ESWSRVCMIAW1758536467833' 
+         );
+        }
+     });
+
         } catch (err) {
             console.error('Error loading Embedded Messaging: ', err);
         }
@@ -146,10 +199,13 @@
     </script>
     <script type='text/javascript' src='https://nylic--devrelease.sandbox.my.site.com/ESWSRVCMIAW1758536467833/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
     
+    
+    
 
 </body>
 
 </html>
+
 
 
 
