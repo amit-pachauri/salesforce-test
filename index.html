@@ -90,7 +90,7 @@
   // Send your identity token to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
     identityTokenType: "JWT",
-    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjIxOTc4NzMsImlhdCI6MTc2MjE4MzQ3M30.iViFJd5TMwtQsZ8qAK2r0YTOuDU0tR6omQ52WITnnGT2er6ubOgv0ddmr_MWWEDDGlloT1AV7rT6JEi3aH_foSPMEOTNKvlpuhQOoLxOUSKsQ86fyAD1TsuKkwkEJPhs8vvQv3Fl0LW0N7NC5eyzPlGj5Fv-vsinPq7B79_EGSkkefEVd9tSNKV7BSDTGIg1N5f25xiCYox36OzksGl4osOmR6PUU2-VSgHbT7tJp8SSjtJZo3hYsRqCRYkjXN1BtwnnxmFgD3B9DSaJ7oQ8VsssRksQGrD61_XmL5OlpDWePw43bP1dhTsVRJsBpGhQyUyczFaWbNXLEQJdXZ5seQ"
+    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiMDA3MjY4ODA5IiwiZXhwIjoxNzYyNDQxMzI1LCJpYXQiOjE3NjI0MjY5MjV9.komhV2ER4o7ZRhPyQLZHUoiJP8OraWWZKAQXU78asXZv83vPXDURYEMHpmEjlrS8Bl3NvVBD3nOo0cMEQkVc-i7k9p8rhVcvTW14oqZdcPaI3z7DVhsJRBIGdiGS5x__G916ZZ7xfObupVjJSheJXQdzQaWfTjHHrnVdIz1eTFS5qQr_WsPQAUwr5Loc4RXE0gAG5KYCTAuAQpxIu2eWv-5SGYghrljAnrw8fQWqPU7cJnSwi7VD0tUOLNQIFxiQ_XFzLhZtYVoNWt1vld6N-l0ShYenfgkTg6IMpffuXbstaGaxw1PSFCv-gxm63zcejWWqR_ZLGPMHzX_eSVwbJA"
   });
    
 });
@@ -101,7 +101,7 @@ window.addEventListener("onEmbeddedMessagingIdentityTokenExpired", () => {
   // Refresh the identity token and send it to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
     identityTokenType: "JWT",
-    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjIxOTc4NzMsImlhdCI6MTc2MjE4MzQ3M30.iViFJd5TMwtQsZ8qAK2r0YTOuDU0tR6omQ52WITnnGT2er6ubOgv0ddmr_MWWEDDGlloT1AV7rT6JEi3aH_foSPMEOTNKvlpuhQOoLxOUSKsQ86fyAD1TsuKkwkEJPhs8vvQv3Fl0LW0N7NC5eyzPlGj5Fv-vsinPq7B79_EGSkkefEVd9tSNKV7BSDTGIg1N5f25xiCYox36OzksGl4osOmR6PUU2-VSgHbT7tJp8SSjtJZo3hYsRqCRYkjXN1BtwnnxmFgD3B9DSaJ7oQ8VsssRksQGrD61_XmL5OlpDWePw43bP1dhTsVRJsBpGhQyUyczFaWbNXLEQJdXZ5seQ"
+    identityToken: "eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiMDA3MjY4ODA5IiwiZXhwIjoxNzYyNDQxMzI1LCJpYXQiOjE3NjI0MjY5MjV9.komhV2ER4o7ZRhPyQLZHUoiJP8OraWWZKAQXU78asXZv83vPXDURYEMHpmEjlrS8Bl3NvVBD3nOo0cMEQkVc-i7k9p8rhVcvTW14oqZdcPaI3z7DVhsJRBIGdiGS5x__G916ZZ7xfObupVjJSheJXQdzQaWfTjHHrnVdIz1eTFS5qQr_WsPQAUwr5Loc4RXE0gAG5KYCTAuAQpxIu2eWv-5SGYghrljAnrw8fQWqPU7cJnSwi7VD0tUOLNQIFxiQ_XFzLhZtYVoNWt1vld6N-l0ShYenfgkTg6IMpffuXbstaGaxw1PSFCv-gxm63zcejWWqR_ZLGPMHzX_eSVwbJA"
   });
 
   // Or, instead of refreshing the identity token, clear all session data
@@ -157,11 +157,11 @@ return payload.sub || null;
                 }
             );
             //...............
-            var tokenkey = 'eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjE5MzUxMTcsImlhdCI6MTc2MTkyMDcxN30.KmO1LB9KaXx6_Jri6ofCPKlipIAQCVwl2QqOh_NGX-ZdHaWmt7Cu_FDernkW0bd632UawiqYTkUu1QD_FGqpHPVlAe27zA4eMI1GG3aHmMMYbtOgrRdsnOtSW-6-XC3XoGM9voCaaB2T6UfG4YI4W-ZZZ7nEouxy5UEGKFMrgxOlJVJNOSuPdecs-aTcKPjHnwrOoym1k8evwq0RXdyBZlXfi2box2c4BaeAHFJat_G8Znk5VjunhkVxXuoPbA0VmzGFyIYvNteh3-5K8BiPd_BsL2TvYM6hbty-gJYR-9TlG-mbTDO4Q8ZAkDB8yPFsF4kKrlmJ3o_ltjPP6lgRrw';
-             var sub = decodeJwtSub(tokenkey);
-           // console.log('tokenkey: ', sub);
-            var sClientId = '12345';
-             const key = CryptoJS.enc.Utf8.parse("1234567890123456");
+            //var tokenkey = 'eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiYW1pdF9wYWNoYXVyaUBuZXd5b3JrbGlmZS5jb20iLCJleHAiOjE3NjE5MzUxMTcsImlhdCI6MTc2MTkyMDcxN30.KmO1LB9KaXx6_Jri6ofCPKlipIAQCVwl2QqOh_NGX-ZdHaWmt7Cu_FDernkW0bd632UawiqYTkUu1QD_FGqpHPVlAe27zA4eMI1GG3aHmMMYbtOgrRdsnOtSW-6-XC3XoGM9voCaaB2T6UfG4YI4W-ZZZ7nEouxy5UEGKFMrgxOlJVJNOSuPdecs-aTcKPjHnwrOoym1k8evwq0RXdyBZlXfi2box2c4BaeAHFJat_G8Znk5VjunhkVxXuoPbA0VmzGFyIYvNteh3-5K8BiPd_BsL2TvYM6hbty-gJYR-9TlG-mbTDO4Q8ZAkDB8yPFsF4kKrlmJ3o_ltjPP6lgRrw';
+            //var sub = decodeJwtSub(tokenkey);
+            //console.log('tokenkey: ', sub);
+             var tokenData = 'eyJraWQiOiJtZXNzYWdpbmdpbnRlZ3JhdGlvbiIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJtaWF3dXNlcnNldHVwdmFyaWZpY2F0aW9uaXNzdWVyIiwic3ViIjoiMDA3MjY4ODA5IiwiZXhwIjoxNzYyNDQxMzI1LCJpYXQiOjE3NjI0MjY5MjV9.komhV2ER4o7ZRhPyQLZHUoiJP8OraWWZKAQXU78asXZv83vPXDURYEMHpmEjlrS8Bl3NvVBD3nOo0cMEQkVc-i7k9p8rhVcvTW14oqZdcPaI3z7DVhsJRBIGdiGS5x__G916ZZ7xfObupVjJSheJXQdzQaWfTjHHrnVdIz1eTFS5qQr_WsPQAUwr5Loc4RXE0gAG5KYCTAuAQpxIu2eWv-5SGYghrljAnrw8fQWqPU7cJnSwi7VD0tUOLNQIFxiQ_XFzLhZtYVoNWt1vld6N-l0ShYenfgkTg6IMpffuXbstaGaxw1PSFCv-gxm63zcejWWqR_ZLGPMHzX_eSVwbJA';
+            /* const key = CryptoJS.enc.Utf8.parse("1234567890123456");
           const iv = CryptoJS.enc.Utf8.parse("abcdef9876543210");
             
             const encrypted = CryptoJS.AES.encrypt(sClientId, key, {
@@ -171,8 +171,9 @@ return payload.sub || null;
                 });
 
                 const cipherBase64 = encrypted.ciphertext.toString(CryptoJS.enc.Base64);
-                console.log("Encrypted (Base64):", cipherBase64);
-            let hiddenPrechatFields = {"Client_Id": cipherBase64};
+                console.log("Encrypted (Base64):", cipherBase64);*/
+            //let hiddenPrechatFields = {"Client_Id": cipherBase64};
+            let hiddenPrechatFields = {"Client_Id": tokenData};
             
             window.addEventListener("message", (event) => {
                 if (event.data && event.data.eventName === "request_hidden_prechat_fields") {
@@ -189,6 +190,24 @@ return payload.sub || null;
          );
         }
      });
+     
+     window.addEventListener('message', function(event) {
+        // Optional: validate event.origin if needed
+
+        if (event.data && event.data.type === 'ESW_MINIMIZE_WIDGET') {
+            console.log('Closing chat window:', event);
+
+            // Option 1: If iframe is embedded in parent page, hide or remove it
+            const chatIframe = document.getElementById('embeddedMessagingFrame');            
+            if (chatIframe) {
+                    chatIframe.classList.remove('isMaximized');
+                    chatIframe.classList.add('isMinimized');                
+            }
+
+            // Option 2: If this was opened via `window.open()`, close the window
+            // window.close();
+        }
+    });
 
         } catch (err) {
             console.error('Error loading Embedded Messaging: ', err);
@@ -205,6 +224,7 @@ return payload.sub || null;
 </body>
 
 </html>
+
 
 
 
